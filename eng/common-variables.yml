@@ -9,7 +9,7 @@ variables:
 
   - ${{ if and(ne(variables['System.TeamProject'], 'public'), notin(variables['Build.Reason'], 'PullRequest')) }}:
     - name: _SignType
-      value: real
+      value: test
     - name: _PublishBlobFeedUrl
       value: https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json
     # DotNet-Blob-Feed provides: dotnetfeed-storage-access-key-1
